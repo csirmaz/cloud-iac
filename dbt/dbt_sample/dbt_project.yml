@@ -32,5 +32,6 @@ clean-targets:         # directories to be removed by `dbt clean`
 models:
   dbt_sample:
     # Config indicated by + and applies to all files under models/example/
+    # default is to materialize into a view (not a table)
     example:
       +materialized: view
