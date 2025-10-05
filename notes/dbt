@@ -13,3 +13,14 @@ $ dbt run
 
 
 $ dbt test
+
+
+
+
+
+
+Alternatively, use dbt build to, in lineage order:
+
+    Run the unit tests on your model.
+    Materialize your model in the warehouse.
+    Run the data tests on your model.
