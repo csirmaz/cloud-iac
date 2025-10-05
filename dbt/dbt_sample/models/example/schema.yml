@@ -19,3 +19,10 @@ models:
         data_tests:
           - unique
           - not_null
+
+  - name: third_model
+    columns:
+      - name: id
+        data_tests:
+          - unique
+          - not_null

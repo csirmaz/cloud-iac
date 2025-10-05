@@ -1,0 +1,15 @@
+
+dbt
+===
+
+SEEDS
+- add CSV to seeds/ directory
+- run dbt seed to create tables
+
+
+$ dbt run
+    * doesn't run tests
+    -t TARGET
+
+
+$ dbt test
