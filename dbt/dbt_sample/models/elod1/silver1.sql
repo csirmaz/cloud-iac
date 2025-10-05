@@ -12,7 +12,7 @@
 select
     unixtime,
     personid,
-    sum(price)
+    sum(price) as sum_price
 from {{ source('bsg','bronze_data') }}
 {% if is_incremental() %}
     -- https://docs.getdbt.com/docs/build/incremental-models
