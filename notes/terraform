@@ -1,0 +1,15 @@
+
+DOING https://developer.hashicorp.com/terraform/tutorials/aws-get-started/aws-create
+DOING https://docs.localstack.cloud/aws/integrations/infrastructure-as-code/terraform/
+
+Always use $ tflocal (instead of terraform)
+
+
+
+tflocal apply
+
+# Localstack / aws commands
+awslocal s3 ls
+awslocal ec2 describe-instances
+
+tflocal destroy
