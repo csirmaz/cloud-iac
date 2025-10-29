@@ -3,6 +3,7 @@ provider "aws" {
   region = "us-west-2"
 }
 
+/*
 data "aws_ami" "ubuntu" {
   most_recent = true
 
@@ -13,9 +14,10 @@ data "aws_ami" "ubuntu" {
 
   owners = ["099720109477"] # Canonical
 }
+*/
 
 resource "aws_instance" "app_server" {
-  ami           = data.aws_ami.ubuntu.id
+  ami           = "ami-df5de72bdb3b" // data.aws_ami.ubuntu.id
   instance_type = "t2.micro"
   tags = {
     Name = "learn-terraform"
