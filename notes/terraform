@@ -7,9 +7,56 @@ Always use $ tflocal (instead of terraform)
 
 
 tflocal apply
+    Plan and apply your configuration now with the terraform apply command.
+    Terraform will print out the execution plan and ask you to confirm the changes before it applies them.
 
 # Localstack / aws commands
 awslocal s3 ls
 awslocal ec2 describe-instances
 
 tflocal destroy
+
+
+
+terraform fmt  - format source files
+terraform validate  - check config
+
+    terraform.tfstate. Terraform stores data about your infrastructure in its state file, which it uses to manage resources
+terraform state list  - List the resources and data sources
+terraform show  - Print out your workspace's entire state
+
+VARIABLES
+---------
+
+variables.tf  - input variables (recommended place)
+REFERENCE: var.instance_type
+$ terraform plan -var instance_type=t2.large
+
+
+OUTPUT VALUES
+-------------
+
+outputs.tf  - output definitions (recommended place)
+
+    Terraform prints out your output values when you run a plan or apply, and also stores them in your workspace's state file.
+terraform output  - get outputs
+
+
+MODULES
+-------
+
+https://developer.hashicorp.com/terraform/language/modules
+A module is a collection of resources that Terraform manages together.
+configuration files in its root directory. Terraform refers to this configuration as the root module.
+Modules you configure using module blocks are called child modules
+
+* USE a module
+    https://developer.hashicorp.com/terraform/language/modules/configuration
+    Could be published, so init to download
+
+    https://developer.hashicorp.com/terraform/language/modules/develop/composition
+
+* WRITE a module
+    https://developer.hashicorp.com/terraform/language/modules/develop#module-structure
+    in a directory or in a separate repo
+

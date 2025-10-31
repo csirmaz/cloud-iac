@@ -1,9 +1,12 @@
 
+// The provider block configures options that apply to all resources managed by your provider
 provider "aws" {
   region = "us-west-2"
 }
 
 /*
+// You can use data blocks to query your cloud provider for information
+// Data source IDs are prefixed with data, followed by the block's type and name.
 data "aws_ami" "ubuntu" {
   most_recent = true
 
@@ -16,11 +19,13 @@ data "aws_ami" "ubuntu" {
 }
 */
 
+// The first line of a resource block declares a resource type and resource name.
+// The resource address for your EC2 instance is aws_instance.app_server.
 resource "aws_instance" "app_server" {
   ami           = "ami-df5de72bdb3b" // data.aws_ami.ubuntu.id
-  instance_type = "t2.micro"
+  instance_type = var.instance_type
   tags = {
-    Name = "learn-terraform"
+    Name = var.instance_name
   }
 }
 
