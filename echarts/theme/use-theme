@@ -1,0 +1,10 @@
+            
+Save the downloaded chalk.js file to your project
+
+            
+Include this file in your HTML:
+<script src="chalk.js"></script>
+
+            
+Use the theme when creating a chart:
+echarts.init(dom, 'custom')

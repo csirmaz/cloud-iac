@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <script src="../dist/echarts.js"></script>
+    <script src="../dist/echart-theme.js"></script>
+  </head>
+  <body>
+    <div id="main" style="width: 600px;height:400px;"></div>
+    <script type="text/javascript">
+      // 'custom' is the name of the theme registered in the file
+      var myChart = echarts.init(document.getElementById('main'), 'custom');
+
+      // Specify the configuration items and data for the chart
+      var option = {
+        title: {
+          text: 'ECharts Getting Started Example'
+        },
+        tooltip: {},
+        legend: {
+          data: ['sales']
+        },
+        xAxis: {
+          data: ['Shirts', 'Cardigans', 'Chiffons', 'Pants', 'Heels', 'Socks']
+        },
+        yAxis: {},
+        series: [
+          {
+            name: 'sales',
+            type: 'bar',
+            data: [5, 20, 36, 10, 10, 20]
+          }
+        ]
+      };
+
+      // Display the chart using the configuration items and data just specified.
+      myChart.setOption(option);
+    </script>
+  </body>
+</html>
