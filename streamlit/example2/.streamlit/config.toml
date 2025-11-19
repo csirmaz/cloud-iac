@@ -1,0 +1,7 @@
+[theme]
+base="dark"
+# primaryColor="forestGreen"
+
+[server]
+enableStaticServing = true
+
